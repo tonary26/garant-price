@@ -1,0 +1,27 @@
+.price-help { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:24px; margin:20px 0 24px; background:#edf3fc; border-radius:8px; color:#1e3c72; }
+.price-help h2 { margin:0 0 8px; font-size:22px; line-height:1.25; font-weight:600; }
+.price-help p { margin:0; max-width:62ch; font-size:14px; line-height:1.6; color:#334763; }
+.price-help__button { flex-shrink:0; display:inline-block; border:0; border-radius:5px; background:#2a5298; color:#fff !important; padding:13px 20px; font:600 14px/1.4 'Segoe UI',sans-serif; cursor:pointer; text-decoration:none; text-align:center; }
+.price-help__button:hover { background:#1e3c72; }
+.price-help__button:focus-visible,.price-contact :focus-visible { outline:3px solid #b77b00; outline-offset:3px; }
+.price-help--compact { margin:0; border-radius:0; background:#f1f5fd; padding:20px; }
+.price-help--compact h2 { font-size:18px; }
+.price-contact { width:min(460px,calc(100% - 32px)); max-height:calc(100dvh - 32px); box-sizing:border-box; margin:auto; padding:30px; border:0; border-radius:8px; color:#25364e; background:#fff; font:14px/1.5 'Segoe UI',sans-serif; overflow:auto; }
+.price-contact::backdrop { background:rgb(15 30 53 / .65); }
+.price-contact h2 { font-size:24px; line-height:1.25; margin:0 32px 10px 0; color:#1e3c72; }
+.price-contact p { margin:0 0 20px; }
+.price-contact__close { position:absolute; top:12px; right:12px; width:36px; height:36px; border:0; background:#edf3fc; color:#1e3c72; border-radius:5px; cursor:pointer; font-size:24px; }
+.price-contact label { display:block; margin:14px 0 6px; font-weight:600; }
+.price-contact input { width:100%; box-sizing:border-box; padding:12px; border:1px solid #8494ac; border-radius:4px; background:white; color:#25364e; font:inherit; }
+.price-contact input::placeholder { color:#56647b; }
+.price-contact .price-help__button { width:100%; margin-top:22px; }
+.price-contact__note { margin-top:12px !important; font-size:12px; color:#526179; }
+.price-contact__status { margin-top:16px; }
+html:has(.price-contact[open]) { overflow:hidden; }
+@media(max-width:600px) { .price-help { align-items:stretch; flex-direction:column; gap:18px; padding:20px 16px; } .price-help h2 { font-size:20px; } .price-help--compact h2 { font-size:18px; } .price-contact { padding:26px 20px; } }
+@media(prefers-reduced-motion:reduce) { .price-help__button { transition:none; } }
+.main-container > .container { width:100%; min-width:0; }
+.main-container { min-width:0; }
+@media(max-width:900px) { .grid-container-header { grid-template-columns:minmax(0,1fr); } .grid-container-header .area-header { min-width:0; } }
+@media(max-width:400px) { .grid-container-header .btn-header { font-size:20px; } }
+@media(max-width:400px) { .grid-container-header .area-header > div:first-child { gap:4px !important; } .grid-container-header .logo-header-gic { flex:1; min-width:0; background-size:contain; background-position:center; } }

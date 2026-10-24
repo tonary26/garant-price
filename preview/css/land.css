@@ -1,0 +1,633 @@
+
+/*Copyright (c) 2020 by Tania Rascia (https://codepen.io/taniarascia/pen/dYvvYv)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+этот вариант меню не используется
+*/
+
+
+.navigation {
+  height: 70px;
+  background: #4a69a6;
+  position: relative;  
+  max-width: 980px;
+  margin: 7px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 3px 0px #d0d0d0;
+}
+
+
+
+@media screen and (min-width: 799px) {
+    
+.brand {
+  display: none;
+}
+
+body{
+    font-size: 20px;
+    line-height: 1.3;
+}    
+}
+
+@media handheld,only screen and (max-width: 798px) {
+
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+    
+}
+
+
+
+.nav-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+nav {
+
+  float: right;
+/*  font-size: 120%;*/
+  
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+@media screen and (min-width: 799px) {
+
+nav ul li {
+    width: 241px;
+    text-align: center;
+}
+
+}
+
+
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  background: #4a69a6;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 7px;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background: #2581DC;
+  color: #ffffff;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #4a69a6;
+  height: 70px;
+  width: 70px;
+  border-radius: 7px;
+}
+
+@media handheld,only screen and (max-width: 798px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 799px) {
+  .nav-list {
+    display: block !important;
+    
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+
+/*----*/
+
+
+
+
+
+
+
+.clear{
+    clear: both;
+}
+                
+                
+.block {
+	
+	margin: 7px;
+	
+}
+
+.block_radius {
+	border-radius: 7px;
+}
+
+.block_shadowed {
+	box-shadow: 0px 0px 3px 0px #d0d0d0;
+}
+
+.block_background {
+	background: #fff;
+}
+
+@media screen and (min-width: 799px) {
+    
+.wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 10px;
+}    
+    
+.block_padding {
+	padding: 25px 30px;
+}
+
+}
+
+@media handheld,only screen and (max-width: 798px) {
+    .block_padding {
+	padding: 7px;
+}
+}
+
+    .form_zakaz_check, .form_zakaz_fio {
+
+    /*  background: #4a69a6;
+      color: #ffffff;*/
+      border-radius: 7px;
+      padding: 10px;
+      box-shadow: 0px 0px 3px 0px #d0d0d0;
+    }
+
+    .form_zakaz_fio {
+      background: #4a69a6;
+      color: #ffffff;
+      max-width: 300px;
+      
+    }
+    
+    
+@media screen and (min-width: 799px) {
+    .form_zakaz_fio {
+      
+      float: left;
+    }
+    
+    .gold {
+        width: 400px;
+        margin: 100px 0 0 100px;
+        border-radius: 7px;
+    }
+ 
+    
+    .gic_1 {
+        background-image: url(../img/gic1.jpg);
+        background-size: cover;
+        height: 360px;
+        background-position: center center;
+        max-width: 980px;
+        margin: 7px;
+        border-radius: 7px;
+        box-shadow: 0px 0px 3px 0px #d0d0d0;
+        
+        
+    }    
+
+    
+}
+
+@media handheld,only screen and (max-width: 798px) {
+    .gold {
+        width: 250px;
+        margin: 20px 0 0 0;
+        border-radius: 7px;
+    }
+
+
+    
+}
+
+    .form_zakaz_check li, .form_zakaz_fio li {
+      list-style: none;  
+      margin: 10px 0 0 0;
+    }
+    
+
+/*Copyright (c) 2020 by Andreas Storm (https://codepen.io/avstorm/pen/vYYBxRM)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/
+    
+    
+.cbx {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  
+}
+.cbx span {
+/*  display: inline-block;*/
+
+/*vertical-align: middle;*/
+
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transform: scale(1);
+  vertical-align: middle;
+  border: 4px solid #ffffff;
+  transition: all 0.2s ease;
+  margin-top: -5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  float: left;
+  border-color: #B9B8C3;
+}
+.cbx span:first-child svg {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 6px;
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 16px;
+  stroke-dashoffset: 16px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  transform: translate3d(0, 0, 0);
+}
+.cbx span:first-child:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #506EEC;
+  display: block;
+  transform: scale(0);
+  opacity: 1;
+  border-radius: 50%;
+  transition-delay: 0.2s;
+}
+
+@media screen and (min-width: 799px) {
+    .cbx span:last-child {
+    /*  margin-left: 8px;*/
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);  
+    }
+}
+
+
+.cbx span:last-child:after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #B9B8C3;
+  transform-origin: 0 0;
+  transform: scaleX(0);
+}
+.cbx:hover span:first-child {
+  border-color: #2581DC;
+}
+
+.inp-cbx:checked + .cbx span:first-child {
+  border-color: #2581DC;
+  background: #2581DC;
+  animation: check 0.6s ease;
+}
+.inp-cbx:checked + .cbx span:first-child svg {
+  stroke-dashoffset: 0;
+}
+.inp-cbx:checked + .cbx span:first-child:before {
+  transform: scale(2.2);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.inp-cbx:checked + .cbx span:last-child {
+  color: #B9B8C3;
+  transition: all 0.3s ease;
+}
+/*.inp-cbx:checked + .cbx span:last-child:after {
+  transform: scaleX(1);
+  transition: all 0.3s ease;
+}*/
+
+.cbx_disable {
+  border-color: #B9B8C3;
+  background: #B9B8C3;
+  color: #B9B8C3;
+  animation: check 0.6s ease;
+  transform: scaleX(1);
+  transition: all 0.3s ease;
+}
+
+
+
+@keyframes check {
+  50% {
+    transform: scale(1.2);
+  }
+}
+    
+/*----*/    
+    
+    
+    
+
+
+
+
+.order {
+    cursor: pointer;
+    color: #000000;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 15px 15px;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.order:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.order:visited {
+    color: #000000;
+}
+    
+
+@media handheld,only screen and (max-width: 798px) {
+    
+    .imglogo{
+        width: 100%;
+    }
+    .img_landadvantage{
+        width: 100%;
+    }
+    .imglogobig{
+    display: none;
+}
+    
+}
+
+@media screen and (min-width: 799px) {
+    .img_landadvantage{
+        width: 100%;
+    }
+    .imglogobig{
+    background-image: url(../img/imglogobig.jpg);
+    background-size: cover;
+    height: 360px;
+    background-position: center center;
+    max-width: 980px;
+    margin: 7px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 3px 0px #d0d0d0;
+    }
+    .imglogotxt{
+    padding: 0 0 0 50%;
+    color: #ffffff;
+    font-size: 150%;
+    text-align: right;
+    }
+    .imglogo{
+        display: none;
+    }
+    
+}
+
+.seminarinfo{
+    cursor: pointer;
+    padding: 15px;
+    color: #819CDD;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    text-transform: uppercase;
+}
+
+.seminarinfo:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+
+.seminarspoileroff{
+    display: none;
+}
+
+.seminarspoileron{
+    display: block;
+}
+
+
+/*http://shpargalkablog.ru/2012/04/css-knopki.html*/
+/*
+a.button_order_land {
+  position: relative;
+  display: inline-block;
+  font-size: 100%;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: #4a69a6 -1px 1px, #4a69a6 1px 1px, #4a69a6 1px -1px, #4a69a6 -1px -1px;
+  text-decoration: none;
+  user-select: none;
+  padding: .3em .7em;
+  outline: none;
+  border-radius: 7px;
+  background: #4a69a6 repeating-linear-gradient(135deg, #4a69a6, #4a69a6 10px, #334974 10px, #334974 20px, #4a69a6 20px);
+  box-shadow:
+   inset -2px -2px rgba(0,0,0,.3),
+   inset 2px 2px rgba(255,255,255,.3);
+  transition: background-position 999999s, color 999999s, text-shadow 999999s;
+}
+a.button_order_land:hover {
+  text-shadow: #6E87B7 -1px 1px, #6E87B7 1px 1px, #6E87B7 1px -1px, #6E87B7 -1px -1px;
+  background: #6E87B7 repeating-linear-gradient(135deg, #6E87B7, #6E87B7 10px, #C8D2E4 10px, #C8D2E4 20px, #6E87B7 20px) no-repeat;
+  background-size: 1000% 100%;
+}
+a.button_order_land:hover {
+  background-position: 0 0;
+}*/
+
+.button_order_land {
+  position: relative;
+  display: inline-block;
+/*  z-index: 1;*/
+/*  width: 6em;*/
+/*  height: 2.5em;
+  line-height: 2.4em;*/
+  margin: 0 0 0 10px;
+  padding: 3px 10px 3px 10px;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+/*  color: #000;*/
+  font-size: 100%;
+  cursor: pointer;
+  color: #ffffff;
+  outline: none;
+  border: 1px solid rgba(110,121,128,.8);
+  border-top-color: rgba(0,0,0,.3);
+  border-radius: 5px;
+  background: linear-gradient(#4a69a6, #334974);
+  
+  box-shadow:
+   0 -1px rgba(10,21,28,.9) inset,
+   0 1px rgba(255,255,255,.5) inset;
+}
+.button_order_land:hover {
+  background: linear-gradient(#C8D2E4, #4a69a6);
+/*  color: #ffffff;*/
+}
+.button_order_land:active {
+/*  line-height: 2.6em;*/
+  background: linear-gradient(#bac6cf, #c5d3de 20%, #71828c);
+  box-shadow: 0 -1px rgba(255,255,255,.4) inset;
+}
+.button_order_land:before {
+  content: "";
+  position: absolute;
+  top: -10px; right: -10px; bottom: -10px; left: -10px;
+/*  z-index: -1;*/
+  z-index: -1;
+  border-radius: 8px;
+  background: linear-gradient(#ECF0F6, #B6C3DB);
+}
+
+
+.caption {
+    color: #4a69a6;
+    text-align: center;
+    font-weight: bold;
+    font-size: 180%;
+}

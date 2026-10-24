@@ -1,0 +1,41 @@
+.top {
+    display: block;
+    height: 60px;
+}
+.order {
+    display: block;
+    float: right;
+    position: relative;
+    z-index: 9999;
+    margin: -10px -10px 0 0;
+    cursor: pointer;
+    color: #ffffff;
+    background: #819CDD;
+    border-radius: 15px;
+    padding: 15px 15px;
+    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.orderlink {
+    background: #909AB2;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5) {.order {font-size: 300%;}}
+@media (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {.order {font-size: 150%;}}
+
+.order:hover {
+    -webkit-transition: 0.35s;
+    -moz-transition: 0.35s;
+    transition: 0.35s;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+}
+
+.orderinfo {
+    display: block;
+    float: right;
+    position: relative;
+    margin: 40px -150px 0 0;
+    text-align: right;
+}
