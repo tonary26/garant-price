@@ -1,23 +1,23 @@
 .fixedbut {
-    position: relative;
+  position: relative;
 }
 
 .fixedbutimg {
-    position: absolute;
+  position: absolute;
 }
 
-.fixedbutlink{
-    position: absolute;
-    height: 120px;
-    margin: 65px 0 0 85px;
-    cursor: pointer;
-    z-index: 999999;
+.fixedbutlink {
+  position: absolute;
+  height: 120px;
+  margin: 65px 0 0 85px;
+  cursor: pointer;
+  z-index: 999999;
 }
 
-.fixedbutclose{
-    position: absolute;
-    font-size: 80px;
-    margin: 150px 0 0 20px;
-    cursor: pointer;
-    z-index: 99999;
+.fixedbutclose {
+  position: absolute;
+  font-size: 80px;
+  margin: 150px 0 0 20px;
+  cursor: pointer;
+  z-index: 99999;
 }

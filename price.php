@@ -11,11 +11,11 @@
 
             background: #f5f7fa;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /*padding: 20px 10px;*/
+
             color: #333;
             line-height: 1.4;
             font-size: 12px;
-            
+
             max-width: 920px;
             margin: 0 auto;
         }
@@ -33,11 +33,7 @@
         .nav a:hover {
             text-decoration: underline;
         }
-/*        .tema {
-            font-size: 18px;
-            margin: 10px 0 5px;
-            color: #1e3c72;
-        }*/
+
         .table-section {
             background: white;
             border-radius: 8px;
@@ -65,15 +61,15 @@
             padding: 10px;
             overflow-x: auto;
         }
-        /* Основные таблицы */
+
         .main-table {
             width: 100%;
             border-collapse: collapse;
             font-size: 10px;
-            min-width: 860px;/*880*/
+            min-width: 860px;
         }
         .main-table th, .main-table td {
-            padding: 4px 3px;/* 4 6 */
+            padding: 4px 3px;
             text-align: center;
             border: 1px solid #e1e5eb;
             line-height: 1.2;
@@ -92,12 +88,12 @@
             font-size: 10px;
             width: 180px;
         }
-        /* Кнопка "Цена" — белая, овальная, с тенью */
+
         .price-btn {
             display: inline-block;
             background: #ffffff;
             border-radius: 30px;
-            padding: 4px 8px;/*4 14*/
+            padding: 4px 8px;
             font-size: 10px;
             font-weight: 600;
             color: #2a5298;
@@ -108,7 +104,7 @@
             user-select: none;
             white-space: nowrap;
             line-height: 1.4;
-            min-width: 34px;/*44*/
+            min-width: 34px;
             text-align: center;
         }
         .price-btn:hover {
@@ -120,31 +116,31 @@
             transform: translateY(1px);
             box-shadow: 0 1px 4px rgba(0,0,0,0.1);
         }
-        /* Цена (скрыта по умолчанию) */
+
         .price-value {
             display: none;
             font-weight: 600;
             color: #2a5298;
             white-space: nowrap;
             font-size: 10px;
-            padding: 4px 3px;/* 4 6 */
+            padding: 4px 3px;
         }
-        /* Когда цена видна — кнопка скрыта */
+
         .price-btn.hidden {
             display: none;
         }
         .price-value.visible {
             display: inline-block;
         }
-        /* Контейнер для кнопки/цены */
+
         .price-cell {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-width: 50px;/*60*/
+            min-width: 50px;
         }
 
-        /* Таблицы с 3 колонками */
+
         .three-col-table {
             width: 100%;
             border-collapse: collapse;
@@ -167,7 +163,7 @@
         .three-col-table .col-price { width: 15%; text-align: center; }
         .content-description { font-size: 10px; line-height: 1.3; }
 
-        /* Английская версия */
+
         .english-table {
             width: 100%;
             border-collapse: collapse;
@@ -212,7 +208,7 @@
     <div class="block_radius">
         <div class="nav"><a href="https://garant-ic.ru">Гарант-ИнфоЦентр</a> -> Купить ГАРАНТ -> Цены ЭПС Система ГАРАНТ</div>
         <br>
-        <h1 class="tema"><?=$hone;?></h1>
+        <h1 class="tema"><?= $hone ?></h1>
         <br>
         <p>
             Цены указаны за отчетный период в рублях без НДС. Отчетным периодом является каждый полный и неполный календарный месяц оказания услуг.
@@ -222,13 +218,13 @@
             Цены действуют с 1 мая 2026 года
         </p>
         <br>
- 
+
         <section class="price-help" aria-labelledby="price-help-title">
 <div><h2 id="price-help-title">Не знаете, какой комплект подходит именно вам?</h2>
 <p>Подберём состав системы под вашу профессию, задачи и количество пользователей и рассчитаем стоимость.</p></div>
 <a href="call_me.php" class="price-help__button" data-price-contact="Получить расчёт">Получить расчёт</a>
 </section>
-<!-- Универсальная линейка  -->
+
         <div class="table-section">
             <header>
                 <h1>Универсальная линейка</h1>
@@ -255,7 +251,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- ГАРАНТ-Классик -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Классик<br>(продается в качестве<br>дополнительного комплекта)</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">10 082</span></span></td>
@@ -269,7 +265,7 @@
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">60 494</span></span></td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">70 577</span></span></td>
                         </tr>
-                        <!-- ГАРАНТ-Классик+ -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Классик+</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">15 124</span></span></td>
@@ -283,7 +279,7 @@
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">90 742</span></span></td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">105 865</span></span></td>
                         </tr>
-                        <!-- ГАРАНТ-Универсал -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Универсал</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">20 165</span></span></td>
@@ -297,7 +293,7 @@
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">120 989</span></span></td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">141 154</span></span></td>
                         </tr>
-                        <!-- ГАРАНТ-Универсал+ -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Универсал+</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">22 685</span></span></td>
@@ -311,7 +307,7 @@
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">136 112</span></span></td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">158 798</span></span></td>
                         </tr>
-                        <!-- ГАРАНТ-Профессионал -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Профессионал</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">25 206</span></span></td>
@@ -325,7 +321,7 @@
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">151 236</span></span></td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">176 442</span></span></td>
                         </tr>
-                        <!-- ГАРАНТ-Мастер -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Мастер</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">30 247</span></span></td>
@@ -339,7 +335,7 @@
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">181 483</span></span></td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">211 730</span></span></td>
                         </tr>
-                        <!-- ГАРАНТ-Аналитик -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Аналитик</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">40 330</span></span></td>
@@ -353,7 +349,7 @@
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">241 978</span></span></td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">282 307</span></span></td>
                         </tr>
-                        <!-- ГАРАНТ-Аналитик+ -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Аналитик+</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">50 412</span></span></td>
@@ -367,7 +363,7 @@
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">302 472</span></span></td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">352 884</span></span></td>
                         </tr>
-                        <!-- ГАРАНТ-Максимум -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Максимум</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">70 577</span></span></td>
@@ -381,7 +377,7 @@
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">423 461</span></span></td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">494 038</span></span></td>
                         </tr>
-                        <!-- ГАРАНТ-Максимум. Вся Россия -->
+
                         <tr>
                             <td class="product-name">ГАРАНТ-Максимум.<br>Вся Россия</td>
                             <td><span class="price-cell" onclick="togglePrice(this)"><span class="price-btn">Цена</span><span class="price-value">181 483</span></span></td>
@@ -404,7 +400,7 @@
 </aside>
 </div>
 
-        <!-- Профессиональная линейка -->
+
         <div class="table-section">
             <header>
                 <h1>Профессиональная линейка</h1>
@@ -598,7 +594,7 @@
             </div>
         </div>
 
-        <!-- Правовая поддержка (3 колонки) -->
+
         <div class="table-section">
             <header>
                 <h1>Правовая поддержка</h1>
@@ -626,7 +622,7 @@
             <div class="note"><p><strong>Примечание:</strong> * - предоставляется только в составе комплекта системы ГАРАНТ</p></div>
         </div>
 
-        <!-- LegalTech линейка (3 колонки) -->
+
         <div class="table-section">
             <header>
                 <h1>Услуги линейки LegalTech</h1>
@@ -655,7 +651,7 @@
             <div class="note"><p><strong>Примечание:</strong> все пакеты ГАРАНТ-LegalTech приобретаются только с комплектами системы ГАРАНТ</p></div>
         </div>
 
-        <!-- Английская версия -->
+
         <div class="table-section">
             <header>
                 <h1>Правовая база Legislation of Russia in English</h1>
@@ -727,15 +723,12 @@
 
 <script>
     function togglePrice(el) {
-        // el — это .price-cell, по которому кликнули
         var btn = el.querySelector('.price-btn');
         var val = el.querySelector('.price-value');
         if (btn.classList.contains('hidden')) {
-            // цена видна → показываем кнопку, скрываем цену
             btn.classList.remove('hidden');
             val.classList.remove('visible');
         } else {
-            // кнопка видна → скрываем кнопку, показываем цену
             btn.classList.add('hidden');
             val.classList.add('visible');
         }
@@ -758,4 +751,4 @@
 </form></dialog>
 <script src="assets/price-contact.js" defer></script>
 
-<?require_once("footer_m.php")?>	
+<?require_once("footer_m.php")?>

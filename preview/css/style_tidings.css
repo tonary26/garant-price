@@ -1,7 +1,4 @@
-/*Стиль для Вестей*/
-
-
 .tidings_li li {
-    list-style-type: circle;
-    margin-left: 20px;
-   }
+  list-style-type: circle;
+  margin-left: 20px;
+}

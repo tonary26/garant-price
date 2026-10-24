@@ -1,21 +1,19 @@
-/*Стиль для Обратной Связи*/
-
-.feedbackchooseall li{
-    margin: 10px 0 0 0;
+.feedbackchooseall li {
+  margin: 10px 0 0 0;
 }
 
-.feedbackchoosesection li{
-    padding-left: 20px;
+.feedbackchoosesection li {
+  padding-left: 20px;
 }
 
 .spoileron {
-    display: blok;
+  display: blok;
 }
 
 .spoileroff {
-    display: none;
+  display: none;
 }
 
-.spoilerspan{
-    cursor: pointer;
+.spoilerspan {
+  cursor: pointer;
 }
